@@ -17,7 +17,7 @@ struct Account
 
 //Array to store accounts
 struct Account accounts[100];
-int accountcount=0;
+int bankaccount=0;
 
 //Generate Account Number
 int randomaccountnumber()
@@ -60,24 +60,24 @@ int main()
  //Function to create an Account
 void createaccount()
 {
-    if (accountcount < 100)
+    if (bankaccount < 100)
     {
         printf("Enter Account Holder's Full Name: ");
-        scanf(" %s", &accounts[accountcount].name);
-        printf("Enter Father's Name: ");
-        scanf(" %s", &accounts[accountcount].fathername);
-        printf("Enter Aadhar Number: ");
-        scanf("%s", &accounts[accountcount].aadhar);
-        printf("Enter PAN Number: ");
-        scanf("%s", &accounts[accountcount].pan);
+        scanf(" %s", &accounts[bankaccount].name);
+        printf("Enter Father's Name:");
+        scanf(" %s", &accounts[bankaccount].fathername);
+        printf("Enter Aadhar Number:");
+        scanf("%s", &accounts[bankaccount].aadhar);
+        printf("Enter PAN Number:");
+        scanf("%s", &accounts[bankaccount].pan);
         printf("Enter Mobile Number: ");
-        scanf("%s", &accounts[accountcount].mobile);
-        accounts[accountcount].accountnumber = randomaccountnumber(); // Generates a unique number
-        printf("Enter Initial Balance: ");
-        scanf("%f", &accounts[accountcount].balance);
+        scanf("%s", &accounts[bankaccount].mobile);
+        accounts[bankaccount].accountnumber = randomaccountnumber(); // Generates a unique number
+        printf("Enter Initial Balance:");
+        scanf("%f", &accounts[bankaccount].balance);
         printf("\nAccount Created Successfully!\n");
-        printf("Your Account Number is: %d\n", accounts[accountcount].accountnumber);
-        accountcount++;
+        printf("Your Account Number is: %d\n", accounts[bankaccount].accountnumber);
+        bankaccount++;
     } 
     else 
     {
